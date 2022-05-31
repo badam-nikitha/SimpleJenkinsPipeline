@@ -4,7 +4,7 @@ pipeline {
 
         stage('Checkout Codebase') {
             steps {
-            checkout scm: [$class: 'GitSCM', userRemoteConfigs: [[credentialsId: 'ssh-key',url: 'git@github.com:badam-nikitha/multithreading-example1.git']]]
+            checkout scm: [$class: 'Git SCM', userRemoteConfigs: [[credentialsId: 'ssh-key',url: 'git@github.com:badam-nikitha/multithreading-example1.git']]]
 
             }
         }
