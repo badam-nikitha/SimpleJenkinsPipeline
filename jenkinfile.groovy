@@ -10,18 +10,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'gcc multithreading-example1.c -lpthread'
+                bat 'gcc multithreading-example1.c -lpthread'
 
             }
         }
         stage('Test') {
             steps {
-                sh './a.out'
+                bat './a.out'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo Done!'
+                bat 'echo Done!'
             }
         }
     }
